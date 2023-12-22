@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Ändere die Größe der richtigen Box
             if (correctBox) {
-                correctBox.style.transform = "scale(1.2)"; // Ändere die Skalierung nach Bedarf
+                correctBox.style.transform = "scale(1.3)"; // Ändere die Skalierung nach Bedarf
             }
 
             incrementCounter("wrongCounter");
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 correctBox.style.transform = "scale(1)"; // Zurücksetzen der Skalierung
             }
             setColors();
-        }, 1600);
+        }, 1100);
     }
 
     // Funktion zum Inkrementieren des Zählers
