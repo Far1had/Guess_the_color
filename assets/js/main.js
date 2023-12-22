@@ -32,23 +32,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 checkAnswer(color, targetColor);
             });
             button.style.backgroundColor = color;
+            button.style.borderRadius = "50px"; // Setze den Radius auf 50px
             buttonsContainer.appendChild(button);
         });
     }
 
-    // Funktion zur Überprüfung der Antwort
-    function checkAnswer(selectedColor, targetColor) {
-        const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
-        if (selectedColor === targetColor) {
-            resultMessage.textContent = "🥳🥳🥳Yeaaah Ja, die Farbe ist richtig!🥳🥳🥳";
-            incrementCounter("correctCounter");
-        } else {
-            resultMessage.textContent = "🤪🤪🤪OOOH Nein, das ist nicht die richtige Farbe.🤪🤪🤪";
-            incrementCounter("wrongCounter");
-        }
-
-        setColors();
+// Funktion zur Überprüfung der Antwort
+function checkAnswer(selectedColor, targetColor) {
+    const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
+    if (selectedColor === targetColor) {
+        resultMessage.textContent = "🥳🥳🥳Yeaaah Ja, die Farbe ist richtig!🥳🥳🥳";
+        resultMessage.style.color = "blue"; // Setze die Farbe auf Blau für richtig
+        incrementCounter("correctCounter");
+    } else {
+        resultMessage.textContent = "🤪🤪🤪OOOH Nein, das ist nicht die richtige Farbe.🤪🤪🤪";
+        resultMessage.style.color = "red"; // Setze die Farbe auf Rot für falsch
+        incrementCounter("wrongCounter");
     }
+
+    setColors();
+}
+
 
     // Funktion zum Inkrementieren des Zählers
     function incrementCounter(counterName) {
