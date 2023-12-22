@@ -45,7 +45,7 @@ function checkAnswer(selectedColor, targetColor) {
     const wrongSound = new Audio("./assets/sounds/wrong.mp3");
 
     if (selectedColor === targetColor) {
-        resultMessage.textContent = "⭐️Yeaaah ⭐️ Farbe ⭐️ richtig!⭐️";
+        resultMessage.textContent = "⭐️Yeaaah ⭐️ Farbe ⭐️ Richtig!⭐️";
         resultMessage.style.color = "blue"; // Setze die Farbe auf Blau für richtig
         incrementCounter("correctCounter");
         correctSound.play(); // Spiele den "correct"-Sound ab
