@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateCounterDisplay() {
         const correctCounter = localStorage.getItem("correctCounter") || 0;
         const wrongCounter = localStorage.getItem("wrongCounter") || 0;
-        document.getElementById("correctCounter").textContent = `Richtig: ${correctCounter} ⭐️`;
-        document.getElementById("wrongCounter").textContent = `Falsch: ${wrongCounter} ❌`;
+        document.getElementById("correctCounter").textContent = ` ${correctCounter} ⭐️ <-Richtig |`;
+        document.getElementById("wrongCounter").textContent = `Falsch-> ❌ ${wrongCounter} `;
     }
 
     // Funktion zum Starten des Spiels
