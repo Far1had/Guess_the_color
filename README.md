@@ -28,11 +28,6 @@ Viel Spaß beim Spielen und Verbessern Ihrer Fähigkeiten zur Farberkennung!
 
 ---
 
-**H
----
----
----
-
 **Hinweis:** Dieses Spiel wurde entwickelt und designt von Farhad Amini im Rahmen einer Programmieraufgabe und dient zu Bildungszwecken.
 
 # Guess the Color Game
@@ -68,5 +63,4 @@ Have fun playing and improving your color recognition skills!
 **Note:** This game was created as part of a programming exercise and is for educational purposes.
 ---
 
-**Note:** This game was developed and designed by Farhad Amini as part of a programming exercise and is for educational purposes.
-
+**Note:** This game was developed and designed by Farhad Amini.
