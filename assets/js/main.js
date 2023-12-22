@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 correctBox.style.transform = "scale(1)"; // Zurücksetzen der Skalierung
             }
             setColors();
-        }, 1000);
+        }, 1600);
     }
 
     // Funktion zum Inkrementieren des Zählers
@@ -95,8 +95,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Funktion zum Zurücksetzen des Spiels
     function reset() {
-        document.getElementById("richtigOderFalschMessageAusgabe").textContent = "";
-        startGame();
+        const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
+
+        // Ergebnisnachricht für 1 Sekunde anzeigen
+        setTimeout(() => {
+            resultMessage.textContent = "";
+            startGame();
+        }, 10000);
     }
 
     startGame();
