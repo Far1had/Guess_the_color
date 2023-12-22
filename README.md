@@ -1,3 +1,4 @@
+
 # Farbenspiel - Raten Sie die Farbe!
 
 Willkommen beim Farbenspiel! Testen Sie Ihre Fähigkeiten zur Farberkennung, indem Sie die richtige Farbe unter fünf Optionen erraten.
@@ -26,6 +27,8 @@ Das Spiel verwendet den lokalen Speicher, um Ihre Gesamtanzahl von richtigen und
 
 Viel Spaß beim Spielen und Verbessern Ihrer Fähigkeiten zur Farberkennung!
 
+
+**Note:** Dieses Spiel wurde von Farhad Amini entwickelt und gestaltet.
 ---
 
 **Hinweis:** Dieses Spiel wurde entwickelt und designt von Farhad Amini im Rahmen einer Programmieraufgabe und dient zu Bildungszwecken.
