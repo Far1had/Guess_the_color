@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    height: 60vh;
+    height: 70vh;
     font-family: inter;
 }
 header {
@@ -14,10 +14,10 @@ header {
 }
 footer {
     background-color: black;
-    height: 32vh;
+    height: 22vh;
 }
 main {
-    height: 60vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
