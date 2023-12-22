@@ -9,32 +9,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Funktion zum Setzen der Ziel-Farbe und der Farben der Buttons
     function setColors() {
-        // Ziel-Farbe im RGB-Format generieren
         const targetColor = generateRandomColor();
 
-        // Ziel-Farbe im H1 setzen
         document.getElementById("outputColorCode").textContent = `Guess what color is: ${targetColor}`;
 
-        // Buttons erstellen und Farben zuweisen
         const buttonColors = [];
         const correctButtonIndex = Math.floor(Math.random() * 5);
 
         for (let i = 0; i < 5; i++) {
-            // Die Ziel-Farbe wird in einer zufällig gewählten Box platziert
             const color = (i === correctButtonIndex) ? targetColor : generateRandomColor();
             buttonColors.push(color);
         }
 
-        // Buttons mit den generierten Farben erstellen
         const buttonsContainer = document.getElementById("buttons-container");
-        buttonsContainer.innerHTML = ""; // Clear existing buttons
+        buttonsContainer.innerHTML = "";
 
         buttonColors.forEach(color => {
             const button = document.createElement("button");
-            button.style.backgroundColor = color;
+            button.classList.add("star-button");
+            button.innerHTML = '<div class="star"></div>';
             button.addEventListener("click", function () {
                 checkAnswer(color, targetColor);
             });
+            button.style.backgroundColor = color;
             buttonsContainer.appendChild(button);
         });
     }
@@ -44,31 +41,44 @@ document.addEventListener("DOMContentLoaded", function () {
         const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
         if (selectedColor === targetColor) {
             resultMessage.textContent = "🥳🥳🥳Yeaaah Ja, die Farbe ist richtig!🥳🥳🥳";
+            incrementCounter("correctCounter");
         } else {
             resultMessage.textContent = "🤪🤪🤪OOOH Nein, das ist nicht die richtige Farbe.🤪🤪🤪";
+            incrementCounter("wrongCounter");
         }
 
-        // Nach der Überprüfung die Farben aktualisieren
         setColors();
+    }
+
+    // Funktion zum Inkrementieren des Zählers
+    function incrementCounter(counterName) {
+        let counter = localStorage.getItem(counterName) || 0;
+        counter++;
+        localStorage.setItem(counterName, counter);
+        updateCounterDisplay();
+    }
+
+    // Funktion zur Anzeige des Zählers
+    function updateCounterDisplay() {
+        const correctCounter = localStorage.getItem("correctCounter") || 0;
+        const wrongCounter = localStorage.getItem("wrongCounter") || 0;
+        document.getElementById("correctCounter").textContent = `Richtig: ${correctCounter} ⭐️`;
+        document.getElementById("wrongCounter").textContent = `Falsch: ${wrongCounter} ❌`;
     }
 
     // Funktion zum Starten des Spiels
     function startGame() {
         setColors();
+        updateCounterDisplay();
     }
 
     // Funktion zum Zurücksetzen des Spiels
     function reset() {
-        // Zurücksetzen der Nachricht
         document.getElementById("richtigOderFalschMessageAusgabe").textContent = "";
-
-        // Starten des Spiels
         startGame();
     }
 
-    // Spiel beim Laden der Seite starten
     startGame();
 
-    // Reset-Funktion mit dem Reset-Button verknüpfen
     document.getElementById("resetButton").addEventListener("click", reset);
 });
