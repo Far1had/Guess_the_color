@@ -93,16 +93,17 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCounterDisplay();
     }
 
-    // Funktion zum Zurücksetzen des Spiels
-    function reset() {
-        const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
+// Funktion zum Zurücksetzen des Spiels
+function reset() {
+    const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
 
-        // Ergebnisnachricht für 1 Sekunde anzeigen
-        setTimeout(() => {
-            resultMessage.textContent = "";
-            startGame();
-        }, 10000);
-    }
+    // Ergebnisnachricht sofort zurücksetzen
+    resultMessage.textContent = "";
+
+    // Spiel sofort neu starten
+    startGame();
+}
+
 
     startGame();
 
