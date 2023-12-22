@@ -5,50 +5,40 @@
 body {
     margin: 0;
     padding: 0;
-    height: 80vh;
+    height: 60vh;
     font-family: inter;
-    
 }
-
-
-header, footer {
+header {
     background-color: black;
-    height: 10vh;
+    height: 8vh;
 }
-
-h2{
-
-
+footer {
+    background-color: black;
+    height: 32vh;
 }
-
 main {
-    height: 80vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
     align-items: center;
-    background-size: cover;
-
 }
-
 .container {
     text-align: center;
 }
 
 .color-box {
-    height: 75px;
+
     width: 75px;
-    margin: 10px;
     display: inline-block;
 }
-
 .buttons-container {
-    margin-top: 20px;
+
 }
 
 button {
-    height: 75px;
-    width: 75px;
+    height: 55px;
+    width: 55px;
     margin: 5px;
     border: none;
     cursor: pointer;
