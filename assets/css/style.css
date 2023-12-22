@@ -2,20 +2,24 @@
     font-family: 'inter';
     src: url(../fonts/Inter/static/Inter-Regular.ttf);
 }
+
 body {
     margin: 0;
     padding: 0;
     height: 70vh;
     font-family: inter;
 }
+
 header {
     background-color: black;
     height: 8vh;
 }
+
 footer {
     background-color: black;
     height: 22vh;
 }
+
 main {
     height: 70vh;
     display: flex;
@@ -23,6 +27,7 @@ main {
     background-repeat: no-repeat;
     align-items: center;
 }
+
 .container {
     text-align: center;
 }
@@ -32,9 +37,8 @@ main {
     width: 75px;
     display: inline-block;
 }
-.buttons-container {
 
-}
+.buttons-container {}
 
 button {
     height: 55px;
@@ -44,15 +48,25 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
+
 .btn {
     height: 40px;
-    width: 90px;
+    width: 250px;
     border-radius: 50px;
+    font-size: 0.8rem;
+    background-color: rgba(16, 1, 5, 0.722);
+    color: white;
 }
-.divAusgabe{
+
+.divAusgabe {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+}
+
+.btndiv {
+    display: flex;
 
 }
 
