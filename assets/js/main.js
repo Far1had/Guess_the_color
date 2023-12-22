@@ -43,11 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const correctBox = document.querySelector(`#buttons-container .star-button[style*="background-color: ${targetColor}"]`);
 
         if (selectedColor === targetColor) {
-            resultMessage.textContent = "🥳🥳🥳Yeaaah Ja, SUPER die Farbe ist richtig!🥳🥳🥳";
+            resultMessage.textContent = "⭐️Yeaaah ⭐️ Farbe ⭐️ richtig!⭐️";
             resultMessage.style.color = "blue"; // Setze die Farbe auf Blau für richtig
             incrementCounter("correctCounter");
         } else {
-            resultMessage.textContent = "🤪🤪🤪OOOH Nein, das ist LEIDER nicht die richtige Farbe.🤪🤪🤪";
+            resultMessage.textContent = "❌OOOH, ❌ Falsche ❌ Farbe.❌";
             resultMessage.style.color = "red"; // Setze die Farbe auf Rot für falsch
 
             // Ändere die Größe der richtigen Box

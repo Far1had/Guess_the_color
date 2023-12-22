@@ -49,7 +49,15 @@ button {
     width: 90px;
     border-radius: 50px;
 }
+.divAusgabe{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
 
 #result-message {
     text-align: center;
+
+
 }
