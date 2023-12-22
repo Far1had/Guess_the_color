@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 correctBox.style.transform = "scale(1)"; // Zurücksetzen der Skalierung
             }
             setColors();
-        }, 1100);
+        }, 1000);
     }
 
     // Funktion zum Inkrementieren des Zählers
