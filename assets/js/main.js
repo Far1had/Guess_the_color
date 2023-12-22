@@ -37,22 +37,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-// Funktion zur Überprüfung der Antwort
-function checkAnswer(selectedColor, targetColor) {
-    const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
-    if (selectedColor === targetColor) {
-        resultMessage.textContent = "🥳🥳🥳Yeaaah Ja, SUPER die Farbe ist richtig!🥳🥳🥳";
-        resultMessage.style.color = "blue"; // Setze die Farbe auf Blau für richtig
-        incrementCounter("correctCounter");
-    } else {
-        resultMessage.textContent = "🤪🤪🤪OOOH Nein, das ist LEIDER nicht die richtige Farbe.🤪🤪🤪";
-        resultMessage.style.color = "red"; // Setze die Farbe auf Rot für falsch
-        incrementCounter("wrongCounter");
+    // Funktion zur Überprüfung der Antwort
+    function checkAnswer(selectedColor, targetColor) {
+        const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
+        const correctBox = document.querySelector(`#buttons-container .star-button[style*="background-color: ${targetColor}"]`);
+
+        if (selectedColor === targetColor) {
+            resultMessage.textContent = "🥳🥳🥳Yeaaah Ja, SUPER die Farbe ist richtig!🥳🥳🥳";
+            resultMessage.style.color = "blue"; // Setze die Farbe auf Blau für richtig
+            incrementCounter("correctCounter");
+        } else {
+            resultMessage.textContent = "🤪🤪🤪OOOH Nein, das ist LEIDER nicht die richtige Farbe.🤪🤪🤪";
+            resultMessage.style.color = "red"; // Setze die Farbe auf Rot für falsch
+
+            // Ändere die Größe der richtigen Box
+            if (correctBox) {
+                correctBox.style.transform = "scale(1.2)"; // Ändere die Skalierung nach Bedarf
+            }
+
+            incrementCounter("wrongCounter");
+        }
+
+        // Füge einen Timer hinzu, um die Größe nach einer kurzen Zeit zurückzusetzen (optional)
+        setTimeout(() => {
+            if (correctBox) {
+                correctBox.style.transform = "scale(1)"; // Zurücksetzen der Skalierung
+            }
+            setColors();
+        }, 1000);
     }
-
-    setColors();
-}
-
 
     // Funktion zum Inkrementieren des Zählers
     function incrementCounter(counterName) {
