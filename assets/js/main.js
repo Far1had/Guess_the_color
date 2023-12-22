@@ -37,35 +37,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Funktion zur Überprüfung der Antwort
-    function checkAnswer(selectedColor, targetColor) {
-        const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
-        const correctBox = document.querySelector(`#buttons-container .star-button[style*="background-color: ${targetColor}"]`);
+   // Funktion zur Überprüfung der Antwort
+function checkAnswer(selectedColor, targetColor) {
+    const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
+    const correctBox = document.querySelector(`#buttons-container .star-button[style*="background-color: ${targetColor}"]`);
+    const correctSound = new Audio("./assets/sounds/correct.mp3");
+    const wrongSound = new Audio("./assets/sounds/wrong.mp3");
 
-        if (selectedColor === targetColor) {
-            resultMessage.textContent = "⭐️Yeaaah ⭐️ Farbe ⭐️ richtig!⭐️";
-            resultMessage.style.color = "blue"; // Setze die Farbe auf Blau für richtig
-            incrementCounter("correctCounter");
-        } else {
-            resultMessage.textContent = "❌OOOH, ❌ Falsche ❌ Farbe.❌";
-            resultMessage.style.color = "red"; // Setze die Farbe auf Rot für falsch
+    if (selectedColor === targetColor) {
+        resultMessage.textContent = "⭐️Yeaaah ⭐️ Farbe ⭐️ richtig!⭐️";
+        resultMessage.style.color = "blue"; // Setze die Farbe auf Blau für richtig
+        incrementCounter("correctCounter");
+        correctSound.play(); // Spiele den "correct"-Sound ab
+    } else {
+        resultMessage.textContent = "❌OOOH, ❌ Falsche ❌ Farbe.❌";
+        resultMessage.style.color = "red"; // Setze die Farbe auf Rot für falsch
 
-            // Ändere die Größe der richtigen Box
-            if (correctBox) {
-                correctBox.style.transform = "scale(1.2)"; // Ändere die Skalierung nach Bedarf
-            }
-
-            incrementCounter("wrongCounter");
+        // Ändere die Größe der richtigen Box
+        if (correctBox) {
+            correctBox.style.transform = "scale(1.2)"; // Ändere die Skalierung nach Bedarf
         }
 
-        // Füge einen Timer hinzu, um die Größe nach einer kurzen Zeit zurückzusetzen (optional)
-        setTimeout(() => {
-            if (correctBox) {
-                correctBox.style.transform = "scale(1)"; // Zurücksetzen der Skalierung
-            }
-            setColors();
-        }, 1000);
+        incrementCounter("wrongCounter");
+        wrongSound.play(); // Spiele den "wrong"-Sound ab
     }
+
+    // Füge einen Timer hinzu, um die Größe nach einer kurzen Zeit zurückzusetzen (optional)
+    setTimeout(() => {
+        if (correctBox) {
+            correctBox.style.transform = "scale(1)"; // Zurücksetzen der Skalierung
+        }
+        setColors();
+    }, 1000);
+}
+
 
     // Funktion zum Inkrementieren des Zählers
     function incrementCounter(counterName) {
