@@ -1,4 +1,3 @@
-
 # Farbenspiel - Raten Sie die Farbe!
 
 Willkommen beim Farbenspiel! Testen Sie Ihre Fähigkeiten zur Farberkennung, indem Sie die richtige Farbe unter fünf Optionen erraten.
@@ -15,6 +14,12 @@ Willkommen beim Farbenspiel! Testen Sie Ihre Fähigkeiten zur Farberkennung, ind
 
 Das Spiel verfolgt Ihre Leistung. Die Zähler für richtige und falsche Antworten werden unten angezeigt.
 
+## Soundeffekte
+
+Das Spiel bietet jetzt zusätzliche Soundeffekte:
+- Ein positiver Sound wird abgespielt, wenn die Antwort richtig ist.
+- Ein negativer Sound wird abgespielt, wenn die Antwort falsch ist.
+
 ## Zurücksetzen des Spiels
 
 Klicken Sie auf die Schaltfläche "Zurücksetzen", um eine neue Runde zu starten und die Zähler zurückzusetzen.
@@ -27,8 +32,8 @@ Das Spiel verwendet den lokalen Speicher, um Ihre Gesamtanzahl von richtigen und
 
 Viel Spaß beim Spielen und Verbessern Ihrer Fähigkeiten zur Farberkennung!
 
-
 **Note:** Dieses Spiel wurde von Farhad Amini entwickelt und gestaltet.
+
 ---
 
 **Hinweis:** Dieses Spiel wurde entwickelt und designt von Farhad Amini im Rahmen einer Programmieraufgabe und dient zu Bildungszwecken.
@@ -49,6 +54,12 @@ Welcome to the "Guess the Color" game! Test your color recognition skills by gue
 
 The game keeps track of your performance. The counters for correct and wrong answers are displayed at the bottom.
 
+## Sound Effects
+
+The game now features additional sound effects:
+- A positive sound is played when the answer is correct.
+- A negative sound is played when the answer is wrong.
+
 ## Resetting the Game
 
 Click the "Reset" button to start a new round and reset the counters.
@@ -64,6 +75,7 @@ Have fun playing and improving your color recognition skills!
 ---
 
 **Note:** This game was created as part of a programming exercise and is for educational purposes.
+
 ---
 
 **Note:** This game was developed and designed by Farhad Amini.
