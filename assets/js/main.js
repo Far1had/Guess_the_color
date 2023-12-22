@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function checkAnswer(selectedColor, targetColor) {
         const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
         if (selectedColor === targetColor) {
-            resultMessage.textContent = "Ja, die Farbe ist richtig!";
+            resultMessage.textContent = "🥳🥳🥳Yeaaah Ja, die Farbe ist richtig!🥳🥳🥳";
         } else {
-            resultMessage.textContent = "Nein, das ist nicht die richtige Farbe.";
+            resultMessage.textContent = "🤪🤪🤪OOOH Nein, das ist nicht die richtige Farbe.🤪🤪🤪";
         }
 
         // Nach der Überprüfung die Farben aktualisieren
