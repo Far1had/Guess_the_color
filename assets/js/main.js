@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function setColors() {
         const targetColor = generateRandomColor();
 
-        document.getElementById("outputColorCode").textContent = `Guess what color is: ${targetColor} ⁉️🤔⁉️🤔⁉️🤔⁉️`;
+        document.getElementById("outputColorCode").textContent = `👉🏼👉🏼👉🏼  ${targetColor} 🤔⁉️🤔⁉️🤔⁉️`;
 
         const buttonColors = [];
         const correctButtonIndex = Math.floor(Math.random() * 5);
