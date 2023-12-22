@@ -41,11 +41,11 @@ document.addEventListener("DOMContentLoaded", function () {
 function checkAnswer(selectedColor, targetColor) {
     const resultMessage = document.getElementById("richtigOderFalschMessageAusgabe");
     if (selectedColor === targetColor) {
-        resultMessage.textContent = "🥳🥳🥳Yeaaah Ja, die Farbe ist richtig!🥳🥳🥳";
+        resultMessage.textContent = "🥳🥳🥳Yeaaah Ja, SUPER die Farbe ist richtig!🥳🥳🥳";
         resultMessage.style.color = "blue"; // Setze die Farbe auf Blau für richtig
         incrementCounter("correctCounter");
     } else {
-        resultMessage.textContent = "🤪🤪🤪OOOH Nein, das ist nicht die richtige Farbe.🤪🤪🤪";
+        resultMessage.textContent = "🤪🤪🤪OOOH Nein, das ist LEIDER nicht die richtige Farbe.🤪🤪🤪";
         resultMessage.style.color = "red"; // Setze die Farbe auf Rot für falsch
         incrementCounter("wrongCounter");
     }
